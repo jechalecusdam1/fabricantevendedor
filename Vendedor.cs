@@ -8,9 +8,13 @@ namespace fabricantevendedor
         private Almacen _a;
         private Thread _t;
         private Random _rnd = new Random();
-        public Vendedor(Almacen a)
+        private int _initTime;
+        private int _cont;
+        public Vendedor(Almacen a, int contador, int initTime)
         {
             this._a = a;
+            this._cont = contador;
+            this._initTime = initTime;
         }
 
         public void Vende()
@@ -27,9 +31,9 @@ namespace fabricantevendedor
         private void _Accion()
         {
             int ms;
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < _cont; i++)
             {
-                ms = _rnd.Next(1000, 1500);
+                ms = _initTime;
                 Thread.Sleep(ms);
                 _a.Sacar();
             }
