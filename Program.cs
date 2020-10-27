@@ -8,10 +8,10 @@ namespace fabricantevendedor
         {
             Console.WriteLine("INICIO");
             Almacen almacen = new Almacen();
-            Fabricante fabricante = new Fabricante(almacen, 500, 8);
-            Vendedor vendedor = new Vendedor(almacen, 800, 3);
-            Vendedor vendedor2 = new Vendedor(almacen, 1000, 3);
-            Vendedor vendedor3 = new Vendedor(almacen, 1200, 2);
+            Fabricante fabricante = new Fabricante(almacen, 8, 500);
+            Vendedor vendedor = new Vendedor(almacen, 3, 800);
+            Vendedor vendedor2 = new Vendedor(almacen, 3, 1000);
+            Vendedor vendedor3 = new Vendedor(almacen, 2, 1200);
             fabricante.Fabrica();
             vendedor.Vende();
             vendedor2.Vende();
